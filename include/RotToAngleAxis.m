@@ -12,6 +12,22 @@ function [h,theta] = RotToAngleAxis(R)
     % does not satisfy the rotation matrix criteria.
 
     % Check matrix R to see if its size is 3x3
+    disp(inv(R) == transpose(R));
+    if(~((det(R) == 1) && isequal(inv(R), transpose(R)))) 
+        error("The matrix is not a rotation matrix")
+    end
+
+    theta = arccos((trace(R) - 1) / 2);
+    if theta == 0
+        h = [1, 1, 1];
+    elseif theta == pi
+        h1 = sqrt((R(1,1) + 1)/2);
+        h2 = sign(h1) * sign(R(1,2)) * sqrt((R(2,2) + 1)/2);
+        h3 = sign(h1) * sign(R(1,3)) * sqrt((R(3,3) + 1)/2);
+        
+        h = [h1, h2, h3]
+
+
 end
 
  

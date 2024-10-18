@@ -1,9 +1,10 @@
 function R = AngleAxisToRot(h,theta)
-% The fuction implement the Rodrigues Formula
-% Input: 
-% h is the axis of rotation
-% theta is the angle of rotation (rad)
-% Output:
-% R rotation matrix
-
+    skew_h = [
+        0, -h(3), h(2);
+        h(3), 0, -h(1);
+        -h(2), h(1), 0;
+    ];
+    
+    I = eye(3);
+    R = I + sin(theta) * skew_h + (1-cos(theta)) * (skew_h ^ 2);
 end
