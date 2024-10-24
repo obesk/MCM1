@@ -24,5 +24,4 @@ Rx = [1,        0,         0;
 
 % Combined rotation matrix
 R = Rz * Ry * Rx;
-
 end

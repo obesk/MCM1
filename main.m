@@ -73,4 +73,31 @@ disp("Q3.5")
 display(Rrpy4)
 
 
-% 1.4 Rot to Euler
+%% 1.4 Rot to Euler
+
+Rrot1 = [
+    1 0 0;
+    0 0 -1;
+    0 1 0
+];
+
+disp("Q4.2")
+display(RotToYPR(Rrot1));
+
+Rrot2 = [
+    1/2 -sqrt(3)/2 0;
+    sqrt(3)/2 1/2 0;
+    0 0 1
+];
+
+disp("Q4.3")
+display(RotToYPR(Rrot2));
+
+
+Rrot3 = [
+    0 -sqrt(2)/2 sqrt(2)/2;
+    0.5 sqrt(2)/4 sqrt(2)/4;
+    -sqrt(3)/2 sqrt(2*sqrt(3))/4 sqrt(2*sqrt(3))/4
+];
+disp("Q4.4")
+display(RotToYPR(Rrot3));
