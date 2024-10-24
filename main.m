@@ -17,17 +17,40 @@ h = rho / theta;
 disp(AngleAxisToRot(h, theta));
 
 %% Exercise_2
-disp("#### EXERCISE 2 ####")
+disp("#### EXERCISE 2 ####");
 R1 = [1 0 0; 0 0 -1; 0 1 0];
 
-h, theta = RotToAngleAxis(R1);
+[h1, theta1] = RotToAngleAxis(R1);
+disp("Q2.2");
+disp("h:");
+disp(h1);
+disp("theta");
+disp(theta1)
 
 
-R2 = [1 -sqrt(3)/2 0; sqrt(3)/2 0.5 0; 0 0 1];
+% R2 = [1 -sqrt(3)/2 0; sqrt(3)/2 0.5 0; 0 0 1];
+% [h2, theta2] = RotToAngleAxis(R2);
+% disp("Q2.3")
+% disp("h:");
+% disp(h2);
+% disp("theta");
+% disp(theta2)
 
 R3 = [1 0 0; 0 1 0; 0 0 1];
+[h3, theta3] = RotToAngleAxis(R3);
+disp("Q2.4")
+disp("h:");
+disp(h3);
+disp("theta");
+disp(theta3)
 
 R4 = [-1 0 0; 0 -1 0; 0 0 1];
+[h4, theta4] = RotToAngleAxis(R4);
+disp("Q2.5")
+disp("h:");
+disp(h4);
+disp("theta");
+disp(theta4)
 
 
 
