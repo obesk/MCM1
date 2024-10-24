@@ -16,7 +16,7 @@ theta = norm(rho);
 h = rho / theta;
 disp(AngleAxisToRot(h, theta));
 
-%% Exercise_2
+%% 1.2 Rot to angle-axis
 disp("#### EXERCISE 2 ####");
 R1 = [1 0 0; 0 0 -1; 0 1 0];
 
@@ -53,9 +53,24 @@ disp("theta");
 disp(theta4)
 
 
+%% 1.3 Euler to rot
+disp("#### EXERCISE 3 ####");
 
-% 1.2 Rot to angle-axis
+Rrpy1 = YPRToRot(0, 0, pi/2);
+disp("Q3.2")
+display(Rrpy1)
 
-% 1.3 Euler to rot
+Rrpy2 = YPRToRot(deg2rad(60), 0, 0);
+disp("Q3.3")
+display(Rrpy2)
+
+Rrpy3 = YPRToRot(pi/3, pi/2, pi/4);
+disp("Q3.4")
+display(Rrpy3)
+
+Rrpy4 = YPRToRot(0, pi/2, -pi/12);
+disp("Q3.5")
+display(Rrpy4)
+
 
 % 1.4 Rot to Euler
