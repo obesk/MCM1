@@ -1,10 +1,11 @@
+
 function [h, theta] = RotToAngleAxis(R)
 %EULER REPRESENTATION: Given a tensor rotation matrices this function
 % should output the equivalent angle-axis representation values,
 % respectively 'theta' (angle), 'h' (axis) 
 % SUGGESTED FUNCTIONS
     % size()
-    % eye()
+    % eye()and it i
     % abs()
     % det()
     % NB: Enter a square, 3x3 proper-orthogonal matrix to calculate its angle

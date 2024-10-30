@@ -1,3 +1,4 @@
+
 function [R] = YPRToRot(psi, theta, phi)
 % The function compute the rotation matrix using the YPR (yaw-pitch-roll)
 % convention, given psi, theta, phi.

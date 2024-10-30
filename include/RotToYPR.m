@@ -1,3 +1,4 @@
+
 function [psi,theta,phi] = RotToYPR(R)
 % Given a rotation matrix the function outputs the relative euler angles
 % usign the convention YPR
@@ -10,6 +11,11 @@ function [psi,theta,phi] = RotToYPR(R)
 % SUGGESTED FUNCTIONS
     % atan2()
     % sqrt()
+
+ % Check matrix R to see if its size is 3x3
+if(~((det(R) == 1) && isequal(inv(R), transpose(R)))) 
+    error("The matrix is not a rotation matrix");
+ end
 
 theta = atan2(-R(3,1), sqrt(R(1,1)^2 + R(2,1)^2));
 if cos(theta) ~= 0

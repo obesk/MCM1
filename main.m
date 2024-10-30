@@ -103,8 +103,13 @@ for i = 1:size(ex4_inputs, 1)
     input = ex4_inputs{i};
     exercise = input{1};
     R = input{2};
-
-    [psi, theta, phi] = RotToYPR(R);
+	
+	try
+        [psi, theta, phi] = RotToYPR(R);
+    catch ME
+        disp(ME.message)
+        continue;
+	end
 
     disp("EXERCISE " + exercise);
     disp("R: ")
