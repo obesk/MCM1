@@ -10,9 +10,9 @@ function [h, theta] = RotToAngleAxis(R)
 
         %(det(R) == 1)
     theta = acos((trace(R) - 1) / 2);
-    if theta == 0
-        h = [1, 1, 1];
-    elseif theta == pi
+    if theta < tolerance
+        h = [1, 0, 0];
+    elseif abs(theta - pi) < tolerance
         h1 = sqrt((R(1,1) + 1)/2);
         h2 = my_sign(h1) * my_sign(R(1,2)) * sqrt((R(2,2) + 1)/2);
         h3 = my_sign(h1) * my_sign(R(1,3)) * sqrt((R(3,3) + 1)/2);
