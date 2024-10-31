@@ -13,9 +13,11 @@ function [psi,theta,phi] = RotToYPR(R)
     % sqrt()
 
  % Check matrix R to see if its size is 3x3
-if(~((det(R) == 1) && isequal(inv(R), transpose(R)))) 
+ tolerance = 10e-10;
+
+if (norm(inv(R) - transpose(R)) > tolerance || abs(det(R) - 1)  > tolerance) 
     error("The matrix is not a rotation matrix");
- end
+end
 
 theta = atan2(-R(3,1), sqrt(R(1,1)^2 + R(2,1)^2));
 if cos(theta) ~= 0
