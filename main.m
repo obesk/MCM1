@@ -96,7 +96,7 @@ end
 ex4_inputs = {
    {"Q4.2", [1 0 0; 0 0 -1; 0 1 0]}
    {"Q4.3", [1/2 -sqrt(3)/2 0; sqrt(3)/2 1/2 0; 0 0 1]}
-   {"Q4.4", [0 -sqrt(2)/2 sqrt(2)/2; 0.5 sqrt(2)/4 sqrt(2)/4; -sqrt(3)/2 sqrt(2*sqrt(3))/4 sqrt(2*sqrt(3))/4] }
+   {"Q4.4", [0 -sqrt(2)/2 sqrt(2)/2; 0.5 sqrt(2)*sqrt(3)/4 sqrt(2)*sqrt(3)/4; -sqrt(3)/2 sqrt(2)/4 sqrt(2)/4] }
 };
 
 for i = 1:size(ex4_inputs, 1)
@@ -104,6 +104,12 @@ for i = 1:size(ex4_inputs, 1)
     exercise = input{1};
     R = input{2};
 	
+
+    disp("EXERCISE " + exercise);
+    disp("R: ")
+    disp(R)
+
+
 	try
         [psi, theta, phi] = RotToYPR(R);
     catch ME
@@ -111,10 +117,6 @@ for i = 1:size(ex4_inputs, 1)
         continue;
 	end
 
-    disp("EXERCISE " + exercise);
-    disp("R: ")
-    disp(R)
-    
     disp("psi:")
     disp(psi)
     disp("theta:")
