@@ -1,16 +1,5 @@
 
 function [psi,theta,phi] = RotToYPR(R)
-% Given a rotation matrix the function outputs the relative euler angles
-% usign the convention YPR
-% Input:
-% R rotation matrix
-% Output:
-% psi angle around z axis (yaw)
-% theta angle around y axis (theta)
-% phi angle around x axis (phi)
-% SUGGESTED FUNCTIONS
-    % atan2()
-    % sqrt()
 
  % Check matrix R to see if its size is 3x3
  tolerance = 10e-10;
