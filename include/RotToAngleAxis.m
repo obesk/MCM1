@@ -8,7 +8,6 @@ function [h, theta] = RotToAngleAxis(R)
         error("The matrix is not a rotation matrix");
     end
 
-        %(det(R) == 1)
     theta = acos((trace(R) - 1) / 2);
     if theta < tolerance
         h = [1, 0, 0];
