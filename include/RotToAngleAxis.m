@@ -29,7 +29,7 @@ end
 function a = vex(S_a)
 % input: skew matrix S_a (3x3)
 % output: the original a vector (3x1)
-    a = [S_a(3, 2), S_a(1, 3), S_a(2, 1)] / 2;
+    a = [S_a(3, 2), S_a(1, 3), S_a(2, 1)];
 end
 
 % the sign function in matlab returns 0 in case of 0, this is not what we
